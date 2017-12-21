@@ -1,0 +1,26 @@
+This is an parallel implementation of the cdi algorithm.
+The program is split up into 3 classes. 
+1. Data
+	Either simulates the image or loads image
+	data from a file
+2. Cdi
+	Takes the image initialized by Data class and
+	applies cdi algorithm to it, to reconstruct
+	the object
+3. Output
+	Takes the reconstructed object from Cdi class.
+	Handles the saving and displaying of the 
+	results.
+	Must have GnuPlot and be on Linux/Mac system
+	for the plotting utility to work.
+The reason for this implementation is that above classes 
+are contained wholes and can be made as complicated or
+simple as the implementer needs/wants them to be. 
+
+The GPU and CPU code is split up. The only class that
+runs on GPU is Cdi.
+
+External libraries used:
+	- fftw - only class Data should have access
+	- Gnuplot - only class Output should have access
+	- OpenCV - only class Data should have access
